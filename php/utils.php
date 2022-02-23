@@ -8,11 +8,12 @@ function erroreServer() {
 }
 
 function connectDB() {
+	// Connessione al database tramite utente root, senza password. Si noti il nome del database.
 	try {
 		$servername = "localhost";
-		$username = "gcocco";
-		$password = "aiQueeTh2Ahn7eob";
-		$dbname = "gcocco";
+		$username = "root";
+		$password = "";
+		$dbname = "bonaegava";
 
 		// Per semplificare i login diversi tra i membri del gruppo, non usare in produzione
 		if (file_exists("db.json")) {
