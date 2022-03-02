@@ -445,6 +445,75 @@ form[class="info"] h2 {
 }
 
 /*==============================
+  SERVICES SECTION
+==============================*/
+#services h3{
+  top: -1em;
+  text-align: center;
+  font-size: 2.5em;
+  margin-top: 0.5em;
+  margin-bottom: 0.3em;
+  font-variant-caps: all-small-caps;
+}
+
+#services dl{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 70%;
+  list-style-type: none;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: none;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  min-height: 10em;
+}
+
+#services dd{
+  flex-wrap: no-wrap;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  border-radius: 100px;
+  min-height: 6.5em;
+  margin-bottom: 1.2em;
+}
+
+#services dd h4{
+  padding: 0.2em;
+  font-size: 1.5em;
+}
+/*
+#services dd:nth-child(even) h4{
+  text-align: right;
+  padding: 0.2em;
+  font-size: 1.5em;
+}*/
+
+#services dd img{
+  float: left;
+  width: 12%;
+  margin:0.5em 1em 0.5em 0.2em;
+}
+/*#services dd:nth-child(even) img{
+  float: right;
+  width: 12%;
+  margin:0.5em 1em 0.5em 0.2em;
+}*/
+
+#services dd p{
+  margin-left: 0.5em;
+}
+
+/*
+#services dd:nth-child(even) p{
+  text-align: right;
+  margin-right: 0.5em;
+}*/
+
+
+
+
+/*==============================
   INFO SECTION
 ==============================*/
 
