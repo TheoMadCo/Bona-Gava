@@ -483,6 +483,7 @@ form[class="info"] h2 {
 }
 
 #services dd p{
+  clear: right;
   flex-grow: 0;
   flex-shrink: 1;
   margin-left: 0.5em;

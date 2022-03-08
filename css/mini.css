@@ -124,6 +124,9 @@
   SERVICES SECTION
 ==============================*/
 
+#services dd p{
+  clear: right;
+}
 
 /*==============================
   STAFF CARDS
