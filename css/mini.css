@@ -121,6 +121,21 @@
 }
 
 /*==============================
+  SERVICES SECTION
+==============================*/
+#services dd{
+  border-radius: 30px;
+}
+
+#services dd h4{
+  font-size: 1.2rem;
+}
+
+#services dd p{
+  font-size: 0.8rem;
+}
+
+/*==============================
   STAFF CARDS
 ==============================*/
 .staffcards {
