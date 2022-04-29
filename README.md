@@ -7,7 +7,7 @@ Sito web sviluppato per il progetto del corso di Tecnologie Web 2021-22, dell'Un
 
 # Obiettivi
 Il sito è stato sviluppato per un impiego reale massimizzando i parametri di accessibilità e SEO. 
-Il team ha seguito al massimo gli standard del [W3C](https://www.w3.org) e in particolare del [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) per l'accessibilità
+Il team ha seguito al massimo gli standard del [W3C](https://www.w3.org) e in particolare del [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) per l'accessibilità.
 L'interfaccia è completamente responsive e scalabile per qualsiasi tipo di dispositivo. Il layout di stampa è stato inoltre integrato.
 
 # Tecnologie
