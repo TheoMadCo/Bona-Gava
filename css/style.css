@@ -1123,6 +1123,11 @@ footer {
   display: none;
 }
 
+.toggleOn {
+  display: block;
+}
+
+
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     a img {
       border: 0px;

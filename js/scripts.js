@@ -84,12 +84,14 @@ function validateFile(id) {
 		handle.removeAttribute("aria-invalid");
 		handle.removeAttribute("aria-describedby");
 		err.removeAttribute("role");
-		err.style.display = "none";
+		err.classList.remove("toggleOn");
+		err.classList.add("none");
 		return true;
 	} else {
 		handle.setAttribute("aria-invalid", "true");
 		handle.setAttribute("aria-describedby", valid[id][2]);
-		err.style.display = "block";
+		err.classList.add("toggleOn");
+		err.classList.remove("none");
 		err.setAttribute("role", "alert");
 		err.innerHTML = valid[id][3];
 		return false;
@@ -105,12 +107,14 @@ function validateRegex(id) {
 		handle.removeAttribute("aria-invalid");
 		handle.removeAttribute("aria-describedby");
 		err.removeAttribute("role");
-		err.style.display = "none";
+		err.classList.remove("toggleOn");
+		err.classList.add("none");
 		return true;
 	} else {
 		handle.setAttribute("aria-invalid", "true");
 		handle.setAttribute("aria-describedby", valid[id][2]);
-		err.style.display = "block";
+		err.classList.add("toggleOn");
+		err.classList.remove("none");
 		err.setAttribute("role", "alert");
 		err.innerHTML = valid[id][3];
 		return false;
@@ -123,7 +127,8 @@ function validateRep(id) {
 	if (pass.value != document.getElementById(valid[id][1]).value) {
 		pass.setAttribute("aria-invalid", "true");
 		pass.setAttribute("aria-describedby", valid[id][2]);
-		err.style.display = "block";
+		err.classList.add("toggleOn");
+		err.classList.remove("none");
 		err.setAttribute("role", "alert");
 		err.innerHTML = valid[id][3];
 		return false;
@@ -131,7 +136,8 @@ function validateRep(id) {
 		pass.removeAttribute("aria-invalid");
 		pass.removeAttribute("aria-describedby");
 		err.removeAttribute("role");
-		err.style.display = "none";
+		err.classList.remove("toggleOn");
+		err.classList.add("none");
 		return true;
 	}
 }
@@ -147,12 +153,13 @@ function validate(id) {
 }
 
 function closePop() {
-	document.getElementById("confirmPop").style.display = "none";
+	document.getElementById("confirmPop").classList.add("none");
 	document.getElementById("elimina").focus();
 }
 
 function showConfirm() {
-	document.getElementById("confirmPop").style.display = "block";
+	document.getElementById("confirmPop").classList.add("toggleOn");
+	document.getElementById("confirmPop").classList.remove("none")
 	document.getElementById("annulla").focus();
 }
 
@@ -181,7 +188,7 @@ function validatorLoad() {
 			continue;
 		}
 	
-		document.getElementById(valid[key][2]).style.display = "none";
+		document.getElementById(valid[key][2]).classList.add("none");
 
 		if (document.getElementById(key).getAttribute("data-not-required")) {
 			continue;
@@ -194,7 +201,7 @@ function validatorLoad() {
 
 		document.getElementById(key).oninput = function(e) {
 			var caller = e.target || e.srcElement;
- 			if (document.getElementById(valid[caller.id][2]).style.display != "none" && document.getElementById(valid[caller.id][2]).innerHTML != "") {
+ 			if (!document.getElementById(valid[caller.id][2]).classList.contains("none") && document.getElementById(valid[caller.id][2]).innerHTML != "") {
 				validate(caller.id);
 			}
 		}
@@ -202,7 +209,7 @@ function validatorLoad() {
 		if (valid[key][0] == "same") {
 			document.getElementById(valid[key][1]).oninput = function(e) {
 				var caller = e.target || e.srcElement;
-		 		if (document.getElementById(valid[caller.id][2]).style.display != "none" && document.getElementById(valid[caller.id][2]).innerHTML != "") {
+		 		if (!document.getElementById(valid[caller.id][2]).classList.contains("none") && document.getElementById(valid[caller.id][2]).innerHTML != "") {
 					validate(caller.id);
 				}
 			}
