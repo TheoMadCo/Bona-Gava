@@ -10,6 +10,10 @@ Il sito è stato sviluppato per un impiego reale massimizzando i parametri di ac
 Il team ha seguito al massimo gli standard del [W3C](https://www.w3.org) e in particolare del [WCAG](https://www.w3.org/WAI/standards-guidelines/wcag/) per l'accessibilità.
 L'interfaccia è completamente responsive e scalabile per qualsiasi tipo di dispositivo. Il layout di stampa è stato inoltre integrato.
 
+# Riconoscimenti
+Il progetto è stato proposto al concorso *"Accattivante Accessibile : un concorso di abilità e attenzione agli altri "*, ottenendo il 2° posto.
+Maggiori dettagli sulla manifestazione al seguente [link](https://ilbolive.unipd.it/index.php/it/event/accattivante-accessibile-concorso-abilita).
+
 # Tecnologie
 L'intero sito è stato creato adottando le più moderne tecnologie di sviluppo web:
 - ![html5](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
