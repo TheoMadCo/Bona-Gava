@@ -74,8 +74,17 @@
                 <label id="lbl-fmex" for="fmex">Messaggio</label>
                 <textarea id="fmex" placeholder="Buongiorno, vorrei informazioni riguardo..." aria-labelledby="lbl-fmex" maxlength="1000" ></textarea>
                 <span class="error none" id="mex-error"></span>
+
+                <div id="agreementBlock">
+                    <input id="agreement" type="checkbox" aria-labelledby="lbl-checkbox" />
+                    <label id="lbl-checkbox" for="agreement">Accetto i termini della <a href="#">Privacy</a></label>
+                </div>
+
                 
+                <span class="error none" id="checkbox-err"></span>
+
                 <input type="button" value="Invia richiesta" onclick="send_email()"/>
+
             </form>
         </div>
         

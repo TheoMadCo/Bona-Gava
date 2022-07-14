@@ -298,6 +298,31 @@ label {
   margin-bottom: 0.2em;
 }
 
+#agreementBlock {
+  display: flex;
+  align-items: center;
+}
+
+#agreement {
+  position: relative; 
+  top: .9em;
+  margin-right: .3em;
+}
+
+#lbl-checkbox {
+  color: black;
+  font-weight: normal;
+}
+
+#lbl-checkbox a:link{
+  margin: .1em;
+  color: #a42327;
+}
+
+#lbl-checkbox a:visited{
+  color: rgb(99, 0, 0)
+}
+
 textarea {
   margin-bottom: 2em;
   resize: vertical;

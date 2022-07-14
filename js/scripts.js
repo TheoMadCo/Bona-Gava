@@ -70,6 +70,7 @@ var valid = {
 	"img_upload" : ["file", /^.*\.(PNG|png|jpeg|JPEG|jpg|JPG|gif|GIF)$/, "img-up-err", "Caricare un'immagine in formato <abbr lang=\"en\" title=\"Portable Network Graphics\">PNG</abbr>, <abbr lang=\"en\" title=\"Joint Photographic Experts Group\">JPG</abbr> o <abbr lang=\"en\" title=\"Graphics Interchange Format\">GIF</abbr>"],
 	"banner_upload" : ["file", /^.*\.(PNG|png|jpeg|JPEG|jpg|JPG|gif|GIF)$/, "banner-err", "Caricare un <span lang=\"en\">banner</span> in formato <abbr lang=\"en\" title=\"Portable Network Graphics\">PNG</abbr>, <abbr lang=\"en\" title=\"Joint Photographic Experts Group\">JPG</abbr> o <abbr lang=\"en\" title=\"Graphics Interchange Format\">GIF</abbr>"],
 	"alt" : ["regex", /^.{1,32}$/, "alt-err", "Inserire una descrizione alternativa all'immagine (massimo 32 caratteri)"],
+	"agreement" : ["checkbox", null, "checkbox-err", "Devi accettare i termini della Privacy"],
 };
 
 function validateFile(id) {
@@ -142,6 +143,27 @@ function validateRep(id) {
 	}
 }
 
+function validateCheckbox(id) {
+	var check = document.getElementById(id);
+	var err = document.getElementById(valid[id][2]);
+	if (!check.checked ) {
+		check.setAttribute("aria-invalid", "true");
+		check.setAttribute("aria-describedby", valid[id][2]);
+		err.classList.add("toggleOn");
+		err.classList.remove("none");
+		err.setAttribute("role", "alert");
+		err.innerHTML = valid[id][3];
+		return false;
+	} else {
+		check.removeAttribute("aria-invalid");
+		check.removeAttribute("aria-describedby");
+		err.removeAttribute("role");
+		err.classList.remove("toggleOn");
+		err.classList.add("none");
+		return true;
+	}
+}
+
 function validate(id) {
 	if (valid[id][0] == "regex") {
 		return validateRegex(id);
@@ -149,6 +171,8 @@ function validate(id) {
 		return validateRep(id);
 	} else if (valid[id][0] == "file") {
 		return validateFile(id);
+	} else if (valid[id][0] == "checkbox") {
+		return validateCheckbox(id);
 	}
 }
 
