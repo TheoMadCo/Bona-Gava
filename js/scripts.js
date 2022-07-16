@@ -273,3 +273,6 @@ function send_email() {
 
 	location.href = 'mailto:' + 'info@bonaegava.com' + '?Subject=' + oggetto + '&Body=' + message + '%0D%0A%0D%0A'+encodeURIComponent('Mi può contattare al seguente numero: ') + phone;
 }
+
+/* Privacy solution */
+(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);

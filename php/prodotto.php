@@ -132,9 +132,9 @@ if (isset($_SESSION["status"])) {
 	unset($_SESSION["status"]);
 }
 
-$bread = "<p>Ti trovi in: <a href=\"../index.html\" lang=\"en\">Home</a> &gt; &gt; <a href=\"../html/prodotti.html\">Prodotti</a> &gt; &gt; <a href=\"../php/categoria.php?cat=###CAT###\">###CATNAME###</a> &gt; &gt; ###NAME_ENG###</p>";
+$bread = "<p>Ti trovi in: <a href=\"../index.html\" lang=\"en\">Home</a> &raquo; <a href=\"../html/prodotti.html\">Prodotti</a> &raquo; <a href=\"../php/categoria.php?cat=###CAT###\">###CATNAME###</a> &raquo; ###NAME_ENG###</p>";
 if (isset($_GET["w"]) && $_GET["w"] == "1")
-	$bread = "<p>Ti trovi in: <a href=\"../index.html\" lang=\"en\">Home</a> &gt; &gt; <a href=\"../php/personale.php\">Area personale</a> &gt; &gt; <a href=\"../php/wish.php\" lang=\"en\">Wishlist</a> &gt; &gt; ###NAME_ENG###</p>";
+	$bread = "<p>Ti trovi in: <a href=\"../index.html\" lang=\"en\">Home</a> &raquo; <a href=\"../php/personale.php\">Area personale</a> &raquo; <a href=\"../php/wish.php\" lang=\"en\">Wishlist</a> &raquo; ###NAME_ENG###</p>";
 
 $cont = file_get_contents("../html/prodotto.html");
 $cont = str_replace("###BREAD###", $bread, $cont);
